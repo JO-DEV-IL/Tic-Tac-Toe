@@ -2,10 +2,39 @@
 h1{
     text-align: center;
     font-size: 50px;
+    color: #00203fff;
+}
+body{
+    background-color: #00203fff;
+}
+button{
+    background-color: #adefd1ff;
+    border: none;
+    color: #00203fff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    font-size: 25px;
 }
 /* END GLOBAL */
 
 /* CLASS CSS */
+.button-container{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.outer-container{
+    background-color: #adefd1ff;
+    height: 450px;
+    width: 450px;
+    margin: auto;
+    border-radius: 15%;
+}
+
 .container{
     width: 320px;
     height: 320px;
@@ -14,11 +43,11 @@ h1{
 }
 
 .border-b{
-    border-bottom: 10px solid black;
+    border-bottom: 10px solid #00203fff;
 }
 
 .border-r{
-    border-right: 10px solid black;
+    border-right: 10px solid #00203fff;
 }
 
 .col{
@@ -30,7 +59,8 @@ h1{
     line-height: 100px;
 }
 .col:hover{
-    background-color: lightblue;
+    background-color: gainsboro;
+    opacity: 0.8;
 }
 
 .row{
@@ -38,7 +68,7 @@ h1{
 }
 
 .winner{
-    color: blue;
+    color: goldenrod;
 }
 /* END CLASS */
 

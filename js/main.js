@@ -119,3 +119,9 @@ function ComputerPlayer(board){
         availablePositions[move].innerText = 'O' // Code runs and puts an 'O' randomly in an available space on the board
     }
 }
+
+// Simple function to refresh the page on button press
+document.querySelector('button').addEventListener('click', resetGame) // Button click event listener
+function resetGame(){
+    window.location.reload() //Refreshes page
+}
