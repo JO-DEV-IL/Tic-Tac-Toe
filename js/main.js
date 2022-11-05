@@ -42,10 +42,12 @@ function TicTacToeGame(){
 
     //Reset the game without a page refresh
     //Simple forEach function to target all board positions(el) and turn them into empty strings
+    //Removes any 'winner' classes from cols (golden font)
     //Set turn sequence back to 0 so it always starts at human's turn
     this.reset = function(){
         board.positions.forEach((el) => {
             el.innerText = ''
+            el.classList.remove('winner')
             turn = 0
         })
     }
