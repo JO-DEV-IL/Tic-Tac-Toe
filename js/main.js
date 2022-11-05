@@ -1,10 +1,17 @@
 const ticTacToeGame = new TicTacToeGame()
+
+//New function to clear Tic-Tac-Toe Board without a page refresh
+// Button click event listener
+document.querySelector('button').addEventListener('click', ticTacToeGame.reset)
+
 ticTacToeGame.start()
 
 function TicTacToeGame(){
     const board = new Board()
     const humanPlayer = new HumanPlayer(board)
     const computerPlayer = new ComputerPlayer(board)
+    
+    //Start at turn 0
     let turn = 0
 
     this.start = function(){
@@ -31,6 +38,16 @@ function TicTacToeGame(){
             computerPlayer.takeTurn()
         }
         turn++ // Add 1 to turn every time
+    }
+
+    //Reset the game without a page refresh
+    //Simple forEach function to target all board positions(el) and turn them into empty strings
+    //Set turn sequence back to 0 so it always starts at human's turn
+    this.reset = function(){
+        board.positions.forEach((el) => {
+            el.innerText = ''
+            turn = 0
+        })
     }
 }
 
@@ -120,8 +137,8 @@ function ComputerPlayer(board){
     }
 }
 
-// Simple function to refresh the page on button press
-document.querySelector('button').addEventListener('click', resetGame) // Button click event listener
-function resetGame(){
-    window.location.reload() //Refreshes page
-}
+// // Simple function to refresh the page on button press
+// document.querySelector('button').addEventListener('click', resetGame) // Button click event listener
+// function resetGame(){
+//     window.location.reload() //Refreshes page
+// }
